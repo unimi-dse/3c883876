@@ -1,6 +1,6 @@
-#P#ROBABILITY OF STOCK'S FUTURE PRICE
+PROBABILITY OF STOCK'S FUTURE PRICE
 
-## INTRODUCTION
+INTRODUCTION
 The package helps to finding the probability that the Google’s stock price at tomorrow’s close will be greater than today’s closing price.
 
 
