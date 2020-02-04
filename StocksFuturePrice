@@ -12,7 +12,9 @@
 
 stocks_future_price<-function(GOOG)
 {
-
+  #To ignore the warnings during usage
+  options(warn=-1)
+  options("getSymbols.warning4.0"=FALSE)
   # recall Google quotes
   data <- getSymbols(Symbols = 'GOOG', src = 'yahoo', auto.assign = FALSE)
   tail(data)
