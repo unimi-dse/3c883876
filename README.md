@@ -10,6 +10,6 @@ devtools::install_github('unimi-dse/3c883876')
 
 ## USAGE
 
-require(StocksFuturePrice)
+require(StocksFuturePriceR)
 
 stocks_future_price('GOOG')
