@@ -13,9 +13,8 @@
 stocks_future_price<-function(id="GOOG")
 {
 
-
   # recall Google quotes
-  GOOG <- quantmod::getSymbols(Symbols = id, src = 'yahoo', auto.assign =FALSE)
+  id <- quantmod::getSymbols(Symbols = id, src = 'yahoo', auto.assign =FALSE)
 
 
   # importing price data
@@ -27,7 +26,7 @@ stocks_future_price<-function(id="GOOG")
 
   # creating lag and lead features of price column
   id <- xts::xts(id,order.by=as.Date(rownames(id)))
-  id <- as.data.frame(merge(GOOG, lm1=stats::lag(id[,'data.Adjusted'],c(-1,1,3,5,10))))
+  id <- as.data.frame(merge(id, lm1=stats::lag(id[,'data.Adjusted'],c(-1,1,3,5,10))))
 
   # features
   id$Date<-as.Date(rownames(id))

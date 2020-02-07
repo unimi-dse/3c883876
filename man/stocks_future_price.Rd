@@ -4,13 +4,13 @@
 \alias{stocks_future_price}
 \title{Probability of Stock's future price}
 \usage{
-stocks_future_price(GOOG)
+stocks_future_price(id = "GOOG")
 }
 \arguments{
 \item{'GOOG'}{}
 }
 \description{
-The package helps to predict Google's stock future price.
+The package helps to predict stock's future price.
 }
 \examples{
 stocks_future_price('GOOG')
