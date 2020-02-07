@@ -15,7 +15,7 @@ stocks_future_price<-function(GOOG)
 
 
   # recall Google quotes
-  GOOG <- getSymbols(Symbols = 'GOOG', src = 'yahoo', auto.assign =FALSE)
+  GOOG <- quantmod::getSymbols(Symbols = 'GOOG', src = 'yahoo', auto.assign =FALSE)
   summary(GOOG)
 
   # importing price data
@@ -43,11 +43,11 @@ stocks_future_price<-function(GOOG)
   plot(GOOG[, "data.Open"], main = "data")
 
   # plot data using day of week and low data
-  ggplot(GOOG, aes(Day_of_week, data.Low)) +
-    geom_point(na.rm=TRUE, color="blue", size=3, pch=18)
+  ggplot2::ggplot(GOOG, ggplot2::aes(Day_of_week, data.Low)) +
+    ggplot2::geom_point(na.rm=TRUE, color="blue", size=3, pch=18)
   #plot data using Year and High data
-  ggplot(GOOG, aes(data.High, Year)) +
-    geom_point(na.rm=TRUE, color="red", size=3, pch=18)
+  ggplot2::ggplot(GOOG, ggplot2::aes(data.High, Year)) +
+    ggplot2::geom_point(na.rm=TRUE, color="red", size=3, pch=18)
 
 
   # naming variables for reference
