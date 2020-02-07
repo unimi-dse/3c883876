@@ -10,41 +10,41 @@
 #'
 #' @export
 
-stocks_future_price<-function(GOOG)
+stocks_future_price<-function(id="GOOG")
 {
 
 
   # recall Google quotes
-  GOOG <- quantmod::getSymbols(Symbols = 'GOOG', src = 'yahoo', auto.assign =FALSE)
+  GOOG <- quantmod::getSymbols(Symbols = id, src = 'yahoo', auto.assign =FALSE)
 
 
   # importing price data
-  GOOG<-data.frame(xts::as.xts(GOOG))
+  id<-data.frame(xts::as.xts(id))
 
   # attributed the column names
-  names(GOOG) <- c("data.Open"   ,  "data.High"   ,  "data.Low"   ,   "data.Close"  ,  "data.Volume",  "data.Adjusted")
+  names(id) <- c("data.Open"   ,  "data.High"   ,  "data.Low"   ,   "data.Close"  ,  "data.Volume",  "data.Adjusted")
 
 
   # creating lag and lead features of price column
-  GOOG <- xts::xts(GOOG,order.by=as.Date(rownames(GOOG)))
-  GOOG <- as.data.frame(merge(GOOG, lm1=stats::lag(GOOG[,'data.Adjusted'],c(-1,1,3,5,10))))
+  id <- xts::xts(id,order.by=as.Date(rownames(id)))
+  id <- as.data.frame(merge(GOOG, lm1=stats::lag(id[,'data.Adjusted'],c(-1,1,3,5,10))))
 
   # features
-  GOOG$Date<-as.Date(rownames(GOOG))
-  GOOG$Day_of_month<-as.integer(format(as.Date(GOOG$Date),"%d"))
-  GOOG$Month_of_year<-as.integer(format(as.Date(GOOG$Date),"%m"))
-  GOOG$Year<-as.integer(format(as.Date(GOOG$Date),"%y"))
-  GOOG$Day_of_week<-as.factor(weekdays(GOOG$Date))
+  id$Date<-as.Date(rownames(id))
+  id$Day_of_month<-as.integer(format(as.Date(id$Date),"%d"))
+  id$Month_of_year<-as.integer(format(as.Date(id$Date),"%m"))
+  id$Year<-as.integer(format(as.Date(id$Date),"%y"))
+  id$Day_of_week<-as.factor(weekdays(id$Date))
 
 
   # plot data using data.Open
-  plot(GOOG[, "data.Open"], main = "data")
+  plot(id[, "data.Open"], main = "data")
 
   # plot data using day of week and low data
-  ggplot2::ggplot(GOOG, ggplot2::aes(Day_of_week, data.Low)) +
+  ggplot2::ggplot(id, ggplot2::aes(Day_of_week, data.Low)) +
     ggplot2::geom_point(na.rm=TRUE, color="blue", size=3, pch=18)
   #plot data using Year and High data
-  ggplot2::ggplot(GOOG, ggplot2::aes(data.High, Year)) +
+  ggplot2::ggplot(id, ggplot2::aes(data.High, Year)) +
     ggplot2::geom_point(na.rm=TRUE, color="red", size=3, pch=18)
 
 
@@ -53,13 +53,13 @@ stocks_future_price<-function(GOOG)
   tommorow <- 'data.Adjusted.5'
 
   # building outcome
-  GOOG$up_down <- as.factor(ifelse(GOOG[,tommorow] > GOOG[,today], 1, 0))
+  id$up_down <- as.factor(ifelse(id[,tommorow] > id[,today], 1, 0))
 
   # building train
-  train<-GOOG[stats::complete.cases(GOOG),]
+  train<-id[stats::complete.cases(id),]
 
   #building test
-  test<-GOOG[nrow(GOOG),]
+  test<-id[nrow(id),]
 
 
   # training model
@@ -74,7 +74,7 @@ stocks_future_price<-function(GOOG)
   pred<-as.numeric(stats::predict(model,test[,c('data.Open','data.High','data.Low','data.Close','data.Volume','data.Adjusted','data.Adjusted.1','data.Adjusted.2','data.Adjusted.3','data.Adjusted.4','Day_of_month','Month_of_year','Year','Day_of_week')],type = 'response'))
 
   # printing results
-  print("Probability of Google's Stock price going up tommorow:")
+  print("Probability of Stock's price going up tommorow:")
   print(pred)
 
 }
