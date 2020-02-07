@@ -8,5 +8,9 @@ Description: The package helps to predict stock's future price.
 License: GPL-3
 Encoding: UTF-8
 LazyData: FALSE
-Imports: ggplot2, zoo, xts, quantmod, stats
+Imports: 
+ggplot2
+quantmod
+stats
+xts
 RoxygenNote: 7.0.2
