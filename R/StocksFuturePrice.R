@@ -16,14 +16,14 @@ stocks_future_price<-function(GOOG)
 
   # recall Google quotes
   GOOG <- quantmod::getSymbols(Symbols = 'GOOG', src = 'yahoo', auto.assign =FALSE)
-  summary(GOOG)
+
 
   # importing price data
   GOOG<-data.frame(xts::as.xts(GOOG))
 
   # attributed the column names
   names(GOOG) <- c("data.Open"   ,  "data.High"   ,  "data.Low"   ,   "data.Close"  ,  "data.Volume",  "data.Adjusted")
-  names(GOOG)
+
 
   # creating lag and lead features of price column
   GOOG <- xts::xts(GOOG,order.by=as.Date(rownames(GOOG)))
@@ -35,8 +35,6 @@ stocks_future_price<-function(GOOG)
   GOOG$Month_of_year<-as.integer(format(as.Date(GOOG$Date),"%m"))
   GOOG$Year<-as.integer(format(as.Date(GOOG$Date),"%y"))
   GOOG$Day_of_week<-as.factor(weekdays(GOOG$Date))
-
-  head(GOOG)
 
 
   # plot data using data.Open
