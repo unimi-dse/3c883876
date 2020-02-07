@@ -7,6 +7,6 @@ Maintainer: Veronica Astorino <veronica.astorino1@gmail.com>
 Description: The package helps to predict Google's stock future price.
 License: GPL-3
 Encoding: UTF-8
-LazyData: FALSE
+LazyData: true
 Imports: ggplot2, quantmod, stats, xts
 RoxygenNote: 7.0.2
