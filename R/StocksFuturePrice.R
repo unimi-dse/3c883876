@@ -55,8 +55,10 @@ stocks_future_price<-function(GOOG)
   # building outcome
   GOOG$up_down <- as.factor(ifelse(GOOG[,tommorow] > GOOG[,today], 1, 0))
 
-  # building train and test sets
+  # building train
   train<-GOOG[stats::complete.cases(GOOG),]
+
+  #building test
   test<-GOOG[nrow(GOOG),]
 
 
