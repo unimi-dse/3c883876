@@ -10,7 +10,7 @@ stocks_future_price(GOOG)
 \item{'GOOG'}{}
 }
 \description{
-The package help to predict stock's future price.
+The package helps to predict Google's stock future price.
 }
 \examples{
 stocks_future_price('GOOG')

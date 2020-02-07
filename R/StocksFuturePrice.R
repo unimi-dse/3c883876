@@ -1,6 +1,6 @@
 #' @title Probability of Stock's future price
 #'
-#' @description The package help to predict stock's future price.
+#' @description The package helps to predict stock's future price.
 #'
 #' @param 'GOOG'
 #'
@@ -74,7 +74,7 @@ stocks_future_price<-function(GOOG)
   pred<-as.numeric(stats::predict(model,test[,c('data.Open','data.High','data.Low','data.Close','data.Volume','data.Adjusted','data.Adjusted.1','data.Adjusted.2','data.Adjusted.3','data.Adjusted.4','Day_of_month','Month_of_year','Year','Day_of_week')],type = 'response'))
 
   # printing results
-  print("Probability of Stock price going up tommorow:")
+  print("Probability of Google's Stock price going up tommorow:")
   print(pred)
 
 }

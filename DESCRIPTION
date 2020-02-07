@@ -4,9 +4,9 @@ Title: Probability of Stock's future price
 Version: 0.1.0
 Author: Veronica Astorino
 Maintainer: Veronica Astorino <veronica.astorino1@gmail.com>
-Description: The package helps to predict stock's future price.
+Description: The package helps to predict Google's stock future price.
 License: GPL-3
 Encoding: UTF-8
 LazyData: FALSE
-Imports: ggplot2, zoo, xts, quantmod, stats
+Imports: devtools, ggplot2, quantmod, stats, xts
 RoxygenNote: 7.0.2
