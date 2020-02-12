@@ -7,13 +7,13 @@ The package predicts the probability that stock's future price at tomorrow’s c
 ## Installation
 
  ```# first install the R package "devtools" if not installed
- `devtools::install_github('unimi-dse/3c883876')` ```
+ devtools::install_github('unimi-dse/3c883876') ```
 
 
 ## Usage
 
  ``` # load the package
- `require(StocksFuturePriceR)` ```
+ require(StocksFuturePriceR) ```
 
 
 ## Analyze
