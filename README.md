@@ -1,22 +1,21 @@
-# 3c883876
 
-# PROBABILITY OF STOCK'S FUTURE PRICE
+# Probability of Stock's Future Price
 
-## INTRODUCTION
+### 3c883876
 The package predicts the probability that stock's future price at tomorrow’s close will be greater than today’s closing price and its output of a linear regression model.
 
-## INSTALL
+## Installation
 
-># first install the R package "devtools" if not installed
->devtools::install_github('unimi-dse/3c883876')
+```# first install the R package "devtools" if not installed
+```devtools::install_github('unimi-dse/3c883876')
 
 
-## USAGE
+## Usage
 
-># load the package
->require(StocksFuturePriceR)
+```# load the package
+```require(StocksFuturePriceR)
 
->stocks_future_price('GOOG')
+```stocks_future_price('GOOG')
 
 ## Packages Imported
 
