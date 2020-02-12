@@ -4,10 +4,10 @@
 #' @description The package predicts stock's future price and its output of a linear regression model.
 #'
 #'
-#' @param id is a character vector specifying the names of each symbol to be loaded
+#' @param id is a character vector specifying the names of each symbol to be loaded.
 #'
 #'
-#' @return NULL
+#' @return newlist - a list of two components that contains the prediction and model.
 #'
 #
 #' @examples stocks_future_price ('GOOG')
