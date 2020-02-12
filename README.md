@@ -7,11 +7,11 @@ The package predicts the probability that stock's future price at tomorrow’s c
 
 ## INSTALL
 
-devtools::install_github('unimi-dse/3c883876')
+'''devtools::install_github('unimi-dse/3c883876')
 
 
 ## USAGE
 
-require(StocksFuturePriceR)
+'''require(StocksFuturePriceR)
 
-stocks_future_price('GOOG')
+'''stocks_future_price('GOOG')
