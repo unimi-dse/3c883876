@@ -20,7 +20,7 @@ The package predicts the probability that stock's future price at tomorrow’s c
 
 
 ## Analyze
-The main function of the package is `stocks_future_price('id')`, in which 'id' is a character vector specifying the names of each symbol to be loaded. It is useful to predict stock's future price and its output of a linear regression model. For example: `stocks_future_price ('GOOG')`
+The main function of the package is `stocks_future_price('id')`, in which 'id' is a character vector specifying the names of each symbol to be loaded. It is useful to predict stock's future price and its output of a linear regression model. For example: `stocks_future_price ('GOOG')`.
 
 
 ## Packages Imported
