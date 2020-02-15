@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1581782144725.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "609112492",
+    "id" : "BDEBD5EA",
+    "lastKnownWriteTime" : 1581782383,
+    "last_content_update" : 1581782383817,
+    "path" : "~/GitHub/3c883876/R/StocksFuturePriceR.R",
+    "project_path" : "R/StocksFuturePriceR.R",
+    "properties" : {
+        "cursorPosition" : "90,34",
+        "scrollLine" : "81"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
