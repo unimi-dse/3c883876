@@ -7,7 +7,10 @@
 stocks_future_price(id = "GOOG")
 }
 \arguments{
-\item{id}{is a character vector specifying the names of each symbol to be loaded}
+\item{id}{is a character vector specifying the names of each symbol to be loaded.}
+}
+\value{
+newlist - a list of two components that contains the prediction and model.
 }
 \description{
 The package predicts stock's future price and its output of a linear regression model.
