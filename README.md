@@ -1,4 +1,3 @@
-
 # Probability of Stock's Future Price
 
 ### 3c883876
@@ -35,4 +34,3 @@ ggplot2, gridExtra, quantmod, stats, xts
 **Author**: Veronica Astorino
 
 **Date**: February 2020
-

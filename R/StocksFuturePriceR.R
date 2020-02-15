@@ -88,7 +88,7 @@ stocks_future_price<- function(id="GOOG")
                       data.Volume+data.Adjusted+data.Adjusted.1+
                       data.Adjusted.2+data.Adjusted.3+data.Adjusted.4+
                       Day_of_month+Month_of_year+Year+Day_of_week,
-                    family=stats::binomial(link='logit'),data=train)
+                    family=binomial(link='logit'),data=train)
   # making Predictions
   pred<-as.numeric(stats::predict(model,test[,c('data.Open','data.High','data.Low','data.Close','data.Volume','data.Adjusted','data.Adjusted.1','data.Adjusted.2','data.Adjusted.3','data.Adjusted.4','Day_of_month','Month_of_year','Year','Day_of_week')], scale=1, type = 'response'))
 
@@ -97,5 +97,3 @@ stocks_future_price<- function(id="GOOG")
   return(newlist)
 
 }
-
-
