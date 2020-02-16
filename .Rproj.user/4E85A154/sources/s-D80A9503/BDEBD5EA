@@ -5,15 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "609112492",
+    "hash" : "0",
     "id" : "BDEBD5EA",
-    "lastKnownWriteTime" : 1581782383,
-    "last_content_update" : 1581782383817,
+    "lastKnownWriteTime" : 1581847082,
+    "last_content_update" : 1581847082088,
     "path" : "~/GitHub/3c883876/R/StocksFuturePriceR.R",
     "project_path" : "R/StocksFuturePriceR.R",
     "properties" : {
-        "cursorPosition" : "90,34",
-        "scrollLine" : "81"
+        "cursorPosition" : "18,41",
+        "notebook_format" : "html_document",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
